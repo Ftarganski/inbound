@@ -1,0 +1,75 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 95px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icons {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.icon {
+  height: 24px;
+  color: #858479;
+}
+
+.line {
+  width: 480px;
+  height: 1px;
+  background: #858479;
+}
+
+.base {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+}
+
+.logo {
+  width: 93.4px;
+  height: 24px;
+  fill: var(--color-primary-dark-25);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 418px;
+}
+
+.link {
+  font-size: 14px;
+  color: var(--color-primary-dark-50);
+  text-align: center;
+}
+
+.currencies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 93.4px;
+  height: 24px;
+  color: var(--color-primary-dark-50);
+}
+
+.currency {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

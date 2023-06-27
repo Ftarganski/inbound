@@ -1,0 +1,50 @@
+.rating{
+
+}
+
+
+.title{
+
+}
+
+
+.subtitle{
+
+}
+
+
+.gridContainer{
+
+}
+
+.gridItem{
+
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid var(--color-neutral);
+    background-color: transparent;
+    align-items: center;
+}
+
+.buttonText {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--textColor);
+  }
+
+/* Mobile */
+@media (max-width: 700px) {
+ 
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  
+}

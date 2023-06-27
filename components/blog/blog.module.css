@@ -1,0 +1,115 @@
+.posts {
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 752;
+}
+
+.gridItem {
+  width: 368px;
+  border-bottom: 2px solid var(--color-line);
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.postsTitle {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: var(--textColor);
+}
+
+.postsPostTitle {
+  color: var(--color-primary-dark-25);
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.postsPostDate {
+  color: var(--color-primary-dark-50);
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.postsButton {
+  display: flex;
+  justify-content: center;
+  width: 367px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid var(--color-neutral);
+  background-color: transparent;
+  align-items: center;
+}
+
+.postsButtonText {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--textColor);
+}
+
+.postblog {
+  background-image: url("../../public/images/postblog.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.postblogTitle {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: var(--textColor);
+}
+
+.postblogSubtitle {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--textColor);
+}
+
+.postblogButton {
+  display: flex;
+  justify-content: center;
+  width: 367px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px solid var(--color-neutral);
+  background-color: transparent;
+  align-items: center;
+}
+
+.postblogButtonText {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--textColor);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

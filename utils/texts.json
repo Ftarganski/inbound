@@ -1,0 +1,52 @@
+{
+  "head": {
+    "title": "Leadster: Chatbot de Marketing para Aumentar Geração de Leads",
+    "description": "Conheça a Leadster, um Chatbot de Marketing Conversacional para Aumentar a Geração de Leads Qualificados no seu Site. Visite e saiba mais!",
+    "keywords": "Leadster, Chatbot, Marketing"
+  },
+
+  "hero": {
+    "titleBalloon": "WEBNARS EXCLUSIVOS",
+    "subtitle": "Menos Conversinha,",
+    "title": "Mais Conversão",
+    "slogan": "Conheça as estratégias que <span>mudaram o jogo</span> e como aplicá-las no seu negócio",
+    "altDots": "Três tracejados em cima do da vogal ó"
+  },
+
+  "content": {},
+
+  "courses": {},
+
+  "contact": {},
+
+  "rating" :{
+    "buttonText":"VER MÁS"
+  },
+
+  "posts": {
+    "title": "ARTÍCULOS RELACIONADOS",
+    "posttitle" : "Mais Conversão",
+    "postdate" : "22.06.2019",
+    "buttonText": "leer más en nuestro blog"
+  },
+
+  "postblog": {
+    "title":"APRENDE CON LOS MEJORES",
+    "subtitle": "Detrás de cada éxito, hay una história. conoce en nuestro blog.",
+    "buttonText": "leer más en nuestro blog"
+  },
+
+  "footer": {
+    "altIconFacebook": "Facebook",
+    "altIconInstagram": "Instagram",
+    "altIconTwitter": "Twitter",
+    "altIconYoutube": "Youtube",
+    "altLogoUnycos": "Unycos",
+    "conditions": "Terminos y condiciones",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Aviso legal",
+    "dolar": "USD ($)",
+    "euro": "EUR (€)",
+    "divider": "/"
+  }
+}
