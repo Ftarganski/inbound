@@ -6,12 +6,14 @@
 :root {
   --background: #000;
   --textColor: white;
+  --color-primary-dark: #1D1A05;
   --color-primary-dark-50: #858479;
   --color-primary-dark-25: #d8d7ce;
-  --color-neutral:  #F1F1F1;
-  --color-line:  #1d1a05;
-  --color-gold: #C5AF19;
+  --color-neutral: #f1f1f1;
+  --color-line: #1d1a05;
+  --color-gold: #c5af19;
   --color-gold-25: #f2ecc9;
+  --color-neutral: #f6f4ef;
 }
 
 * {
@@ -26,14 +28,4 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--background);
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
