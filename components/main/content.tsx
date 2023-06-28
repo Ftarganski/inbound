@@ -14,9 +14,8 @@ const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(
-    null
-  );
+  const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>(''); // Adiciona o estado para a imagem selecionada
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,9 +43,15 @@ const Content = () => {
   const handleSliderItemClick = (index: number) => {
     if (courseData && courseData.length > 0) {
       const selectedSpotlight = courseData[index];
+
+      const updatedCourseData = [...courseData];
+      updatedCourseData[0] = selectedSpotlight;
+
       setSelectedSpotlight(selectedSpotlight);
+      setSelectedImage(selectedSpotlight.image); // Atualiza a imagem selecionada
     }
   };
+
 
   return (
     <>
@@ -61,16 +66,20 @@ const Content = () => {
               <div className={styles.sliderItem}>
                 <div
                   className={styles.sliderItemImage}
-                  style={{ backgroundImage: `url(${courseData[0].image})` }}
+                  style={{ backgroundImage: `url(${selectedImage || courseData[0].image})` }} // Usa a imagem selecionada ou a primeira imagem do curso
                 />
 
                 <div className={styles.sliderCourses}>
                   <div className={styles.sliderCourseMain}>
                     <div className={styles.sliderCourseMainTitle}>
-                      {selectedSpotlight ? selectedSpotlight.title : courseData[0].title}
+                      {selectedSpotlight
+                        ? selectedSpotlight.title
+                        : courseData[0].title}
                     </div>
                     <div className={styles.sliderCourseMainResume}>
-                      {selectedSpotlight ? selectedSpotlight.description : courseData[0].description}
+                      {selectedSpotlight
+                        ? selectedSpotlight.description
+                        : courseData[0].description}
                     </div>
                   </div>
 
