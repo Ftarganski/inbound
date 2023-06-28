@@ -2,12 +2,12 @@ import axios from 'axios';
 import Cors from 'cors';
 
 const cors = Cors({
-  origin: 'https://inbound-psi.vercel.app', // Domínio do seu aplicativo React
+  origin: 'https://inbound-psi.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 });
 
 const handler = async (req, res) => {
-  await cors(req, res); // Adiciona os cabeçalhos CORS à resposta
+  await cors(req, res);
 
   if (req.method === 'GET') {
     try {
@@ -17,6 +17,9 @@ const handler = async (req, res) => {
           'x-mejor-key': 'unycos',
         },
       });
+
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-mejor-key');
 
       res.status(200).json(response.data.spotlights);
     } catch (error) {
