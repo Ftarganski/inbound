@@ -13,66 +13,74 @@ import { getTexts } from "../../utils/textUtils";
 const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
+  const [isLoading, setIsLoading] = useState(true); // Adiciona o estado isLoading
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.beta.unycos.com/u/courses/spotlights/natacion",
+          'https://api.beta.unycos.com/u/courses/spotlights/natacion',
           {
             headers: {
-              "Content-Type": "application/json",
-              "x-mejor-key": "unycos",
+              'Content-Type': 'application/json',
+              'x-mejor-key': 'unycos',
             },
           }
         );
         setCourseData(response.data.spotlights);
+        setIsLoading(false); // Indica que os dados foram carregados
       } catch (error) {
         console.error(error);
+        setIsLoading(false); // Indica que ocorreu um erro durante o carregamento
       }
     };
+
     fetchData();
   }, []);
 
   return (
     <>
-      <section className={styles.slider}>
-        <div className={styles.sliderContainer}>
-          {courseData && courseData.length > 0 && (
-            <div className={styles.sliderItem}>
-              <div
-                className={styles.sliderItemImage}
-                style={{ backgroundImage: `url(${courseData[0].imageUrl})` }}
-              />
+      {isLoading ? ( // Renderiza um indicador de carregamento enquanto isLoading for true
+        <div>Carregando...</div>
+      ) : (
+        <section className={styles.slider}>
+          <div className={styles.sliderContainer}>
+            {courseData && courseData.length > 0 && (
+              <div className={styles.sliderItem}>
+                <div
+                  className={styles.sliderItemImage}
+                  style={{ backgroundImage: `url(${courseData[0].imageUrl})` }}
+                />
 
-              <div className={styles.sliderCourses}>
-                <div className={styles.sliderCourseMain}>
-                  <div className={styles.sliderCourseMainTitle}>
-                    {courseData[0].title}
-                  </div>
-                  <div className={styles.sliderCourseMainResume}>
-                    {courseData[0].description}
-                  </div>
-                </div>
-
-                <div className={styles.sliderCourseOthers}>
-                  {courseData.slice(1).map((spotlight: Spotlight) => (
-                    <div key={spotlight.title}>
-                      <div className={styles.sliderCourseTitle}>
-                        {spotlight.title}
-                      </div>
-                      <div
-                        className={styles.sliderCourseImage}
-                        style={{ backgroundImage: `url(${spotlight.image})` }}
-                      />
+                <div className={styles.sliderCourses}>
+                  <div className={styles.sliderCourseMain}>
+                    <div className={styles.sliderCourseMainTitle}>
+                      {courseData[0].title}
                     </div>
-                  ))}
+                    <div className={styles.sliderCourseMainResume}>
+                      {courseData[0].description}
+                    </div>
+                  </div>
+
+                  <div className={styles.sliderCourseOthers}>
+                    {courseData.slice(1).map((spotlight: Spotlight) => (
+                      <div key={spotlight.title}>
+                        <div className={styles.sliderCourseTitle}>
+                          {spotlight.title}
+                        </div>
+                        <div
+                          className={styles.sliderCourseImage}
+                          style={{ backgroundImage: `url(${spotlight.image})` }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
-      </section>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className={styles.exclusive}>
         <h3 className={styles.title}>{t.content.exclusiveTitle}</h3>
