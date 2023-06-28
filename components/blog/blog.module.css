@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  width: 752;
+  width: 752px;
 }
 
 .gridItem {

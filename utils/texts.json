@@ -19,19 +19,23 @@
 
   "contact": {},
 
-  "rating" :{
-    "buttonText":"VER MÁS"
+  "rating": {
+    "title": "Comentarios de los estudiantes",
+    "subtitle": "<span>98.7% de valoraciones positivas </span>/ total de 726 valoraciones",
+    "buttonText": "VER MÁS",
+    "altThumbs": "Thumbs Up",
+    "altImage": "User"
   },
 
   "posts": {
     "title": "ARTÍCULOS RELACIONADOS",
-    "posttitle" : "Mais Conversão",
-    "postdate" : "22.06.2019",
+    "posttitle": "Mais Conversão",
+    "postdate": "22.06.2019",
     "buttonText": "leer más en nuestro blog"
   },
 
   "postblog": {
-    "title":"APRENDE CON LOS MEJORES",
+    "title": "APRENDE CON LOS MEJORES",
     "subtitle": "Detrás de cada éxito, hay una história. conoce en nuestro blog.",
     "buttonText": "leer más en nuestro blog"
   },

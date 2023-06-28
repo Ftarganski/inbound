@@ -9,7 +9,9 @@
   --color-primary-dark-50: #858479;
   --color-primary-dark-25: #d8d7ce;
   --color-neutral:  #F1F1F1;
-  --color-line:  #1d1a05
+  --color-line:  #1d1a05;
+  --color-gold: #C5AF19;
+  --color-gold-25: #f2ecc9;
 }
 
 * {

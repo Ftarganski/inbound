@@ -5,16 +5,12 @@ import { getTexts } from "../../utils/textUtils";
 
 const Posts = () => {
   const t = getTexts();
-
-
-
   return (
     <>
       <section className={styles.posts}>
-        <div className={styles.postsTitle}>{t.posts.title}</div>
+        <h3 className={styles.postsTitle}>{t.posts.title}</h3>
         <div className={styles.gridContainer}>
-
-        {data.slice(0, 4).map((item) => (
+          {data.slice(0, 4).map((item) => (
             <div key={item.id} className={styles.gridItem}>
               <h4 className={styles.postsPostTitle}>{item.title}</h4>
               <p className={styles.postsPostDate}>{item.date}</p>
