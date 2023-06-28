@@ -14,16 +14,19 @@ const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(
+    null
+  );
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://api.beta.unycos.com/u/courses/spotlights/natacion',
+          "https://api.beta.unycos.com/u/courses/spotlights/natacion",
           {
             headers: {
-              'Content-Type': 'application/json',
-              'x-mejor-key': 'unycos',
+              "Content-Type": "application/json",
+              "x-mejor-key": "unycos",
             },
           }
         );
@@ -36,17 +39,12 @@ const Content = () => {
     };
 
     fetchData();
-
   }, []);
 
   const handleSliderItemClick = (index: number) => {
     if (courseData && courseData.length > 0) {
       const selectedSpotlight = courseData[index];
-
-      const updatedCourseData = [...courseData];
-      updatedCourseData[0] = selectedSpotlight;
-
-      setCourseData(updatedCourseData);
+      setSelectedSpotlight(selectedSpotlight);
     }
   };
 
@@ -55,9 +53,8 @@ const Content = () => {
       {isLoading ? (
         <div className={styles.loading}>
           <p>{t.content.loading}</p>
-
         </div>
-      ) : ( 
+      ) : (
         <section className={styles.slider}>
           <div className={styles.sliderContainer}>
             {courseData && courseData.length > 0 && (
@@ -70,30 +67,33 @@ const Content = () => {
                 <div className={styles.sliderCourses}>
                   <div className={styles.sliderCourseMain}>
                     <div className={styles.sliderCourseMainTitle}>
-                      {courseData[0].title}
+                      {selectedSpotlight ? selectedSpotlight.title : courseData[0].title}
                     </div>
                     <div className={styles.sliderCourseMainResume}>
-                      {courseData[0].description}
+                      {selectedSpotlight ? selectedSpotlight.description : courseData[0].description}
                     </div>
                   </div>
 
                   <div className={styles.sliderCourseOthers}>
-                    {courseData.slice(1).map((spotlight: Spotlight, index: number) => (
-                      <div
-                        key={spotlight.title}
-                        className={styles.sliderCourseOthersBlock}
-                        onClick={() => handleSliderItemClick(index + 1)}
-                      >
-                        
+                    {courseData
+                      .slice(1)
+                      .map((spotlight: Spotlight, index: number) => (
                         <div
-                          className={styles.sliderCourseImage}
-                          style={{ backgroundImage: `url(${spotlight.image})` }}
-                        />
-                        <div className={styles.sliderCourseTitle}>
-                          {spotlight.title}
+                          key={spotlight.title}
+                          className={styles.sliderCourseOthersBlock}
+                          onClick={() => handleSliderItemClick(index + 1)}
+                        >
+                          <div
+                            className={styles.sliderCourseImage}
+                            style={{
+                              backgroundImage: `url(${spotlight.image})`,
+                            }}
+                          />
+                          <div className={styles.sliderCourseTitle}>
+                            {spotlight.title}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
                   </div>
                 </div>
               </div>
