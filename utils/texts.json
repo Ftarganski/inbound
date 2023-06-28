@@ -15,7 +15,9 @@
 
   "content": {},
 
-  "courses": {},
+  "courses": {
+    "title" : "MÁS CURSOS"
+  },
 
   "contact": {
     "title": "OBTÉN MÁS INFORMACiÓN",

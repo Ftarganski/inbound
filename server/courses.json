@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "speaker": "Marcus Cooper",
+    "title": "<span>enseña&nbsp;</span> piragüismo",
+    "imageUrl": "/images/course001.png"
+  },
+  {
+    "id": 2,
+    "speaker": "ISMAEL CALA",
+    "title": "<span>enseña&nbsp;</span> DESARROLLO PERSONAL",
+    "imageUrl": "/images/course002.png"
+  },
+  {
+    "id": 3,
+    "speaker": "LEWIS AMARANTE",
+    "title": "<span>enseña&nbsp;</span> MAQUILLAJE",
+    "imageUrl": "/images/course003.png"
+  }
+]
