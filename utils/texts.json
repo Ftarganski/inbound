@@ -14,6 +14,7 @@
   },
 
   "content": {
+    "loading" : "Cargando...",
     "exclusiveTitle": "CONTENIDO EXCLUSIVO",
     "exclusiveButtonText": "Mas información",
     "iconBook" : "E-books",

@@ -13,7 +13,7 @@ import { getTexts } from "../../utils/textUtils";
 const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
-  const [isLoading, setIsLoading] = useState(true); // Adiciona o estado isLoading
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,28 +28,43 @@ const Content = () => {
           }
         );
         setCourseData(response.data.spotlights);
-        setIsLoading(false); // Indica que os dados foram carregados
+        setIsLoading(false);
       } catch (error) {
         console.error(error);
-        setIsLoading(false); // Indica que ocorreu um erro durante o carregamento
+        setIsLoading(false);
       }
     };
 
     fetchData();
+
   }, []);
+
+  const handleSliderItemClick = (index: number) => {
+    if (courseData && courseData.length > 0) {
+      const selectedSpotlight = courseData[index];
+
+      const updatedCourseData = [...courseData];
+      updatedCourseData[0] = selectedSpotlight;
+
+      setCourseData(updatedCourseData);
+    }
+  };
 
   return (
     <>
-      {isLoading ? ( // Renderiza um indicador de carregamento enquanto isLoading for true
-        <div>Carregando...</div>
-      ) : (
+      {isLoading ? (
+        <div className={styles.loading}>
+          <p>{t.content.loading}</p>
+
+        </div>
+      ) : ( 
         <section className={styles.slider}>
           <div className={styles.sliderContainer}>
             {courseData && courseData.length > 0 && (
               <div className={styles.sliderItem}>
                 <div
                   className={styles.sliderItemImage}
-                  style={{ backgroundImage: `url(${courseData[0].imageUrl})` }}
+                  style={{ backgroundImage: `url(${courseData[0].image})` }}
                 />
 
                 <div className={styles.sliderCourses}>
@@ -63,15 +78,20 @@ const Content = () => {
                   </div>
 
                   <div className={styles.sliderCourseOthers}>
-                    {courseData.slice(1).map((spotlight: Spotlight) => (
-                      <div key={spotlight.title}>
-                        <div className={styles.sliderCourseTitle}>
-                          {spotlight.title}
-                        </div>
+                    {courseData.slice(1).map((spotlight: Spotlight, index: number) => (
+                      <div
+                        key={spotlight.title}
+                        className={styles.sliderCourseOthersBlock}
+                        onClick={() => handleSliderItemClick(index + 1)}
+                      >
+                        
                         <div
                           className={styles.sliderCourseImage}
                           style={{ backgroundImage: `url(${spotlight.image})` }}
                         />
+                        <div className={styles.sliderCourseTitle}>
+                          {spotlight.title}
+                        </div>
                       </div>
                     ))}
                   </div>
