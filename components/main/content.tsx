@@ -14,28 +14,24 @@ const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const API_BASE_URL = 'http://localhost:5000/u'; // Atualize para a URL do servidor intermediário
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_BASE_URL}/courses/spotlights/natacion`, {
-          headers: {
-            'Content-Type': 'application/json',
-            'x-mejor-key': 'unycos',
-          },
-        });
-    
-        if (response.status === 200) {
-          setCourseData(response.data.spotlights);
-          setIsLoading(false);
-        } else {
-          setIsLoading(false);
-          console.error('Erro ao obter os dados da API');
-        }
-      } catch (error) {
+        const response = await axios.get(
+          'https://api.beta.unycos.com/u/courses/spotlights/natacion',
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'x-mejor-key': 'unycos',
+            },
+          }
+        );
+        setCourseData(response.data.spotlights);
         setIsLoading(false);
-        console.error('Erro ao obter os dados da API', error);
+      } catch (error) {
+        console.error(error);
+        setIsLoading(false);
       }
     };
 
