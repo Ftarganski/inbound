@@ -8,28 +8,24 @@ import IconTest from "../../public/images/icon-tests.svg";
 import IconTask from "../../public/images/icon-tasks.svg";
 import { Spotlight } from "../../types/types";
 import axios from "axios";
+import handler from "../../pages/api/spotlights";
 import { getTexts } from "../../utils/textUtils";
+
 
 const Content = () => {
   const t = getTexts();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string>(''); // Adiciona o estado para a imagem selecionada
+  const [selectedImage, setSelectedImage] = useState<string>(''); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.beta.unycos.com/u/courses/spotlights/natacion",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "x-mejor-key": "unycos",
-            },
-          }
+          "http://localhost:9004/api/spotlights" // Faz a solicitação para a sua API local
         );
-        setCourseData(response.data.spotlights);
+        setCourseData(response.data);
         setIsLoading(false);
       } catch (error) {
         console.error(error);
@@ -48,7 +44,7 @@ const Content = () => {
       updatedCourseData[0] = selectedSpotlight;
 
       setSelectedSpotlight(selectedSpotlight);
-      setSelectedImage(selectedSpotlight.image); // Atualiza a imagem selecionada
+      setSelectedImage(selectedSpotlight.image); 
     }
   };
 
