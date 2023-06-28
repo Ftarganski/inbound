@@ -1,0 +1,64 @@
+/* HERO */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 40px;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+}
+
+.navbarGrid {
+  display: grid;
+  width: 1136px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.navbarItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarItem:nth-child(3) {
+  justify-self: flex-end;
+}
+
+.navbarItem:nth-child(3) > ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.navbarItem:nth-child(3) > ul > li {
+  display: flex;
+  justify-content: right;
+  margin-left: 32px;
+  flex-shrink: 0;
+  color: var(--color-primary-dark-50);
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 93.4px;
+  height: 24px;
+  fill: var(--color-primary-dark-25);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

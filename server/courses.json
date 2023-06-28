@@ -16,5 +16,11 @@
     "speaker": "LEWIS AMARANTE",
     "title": "<span>enseña&nbsp;</span> MAQUILLAJE",
     "imageUrl": "/images/course003.png"
+  },
+  {
+    "id": 4,
+    "speaker": "MIREIA BELMONTE",
+    "title": "<span>enseña&nbsp;</span> natación",
+    "imageUrl": "/images/hero.png"
   }
 ]

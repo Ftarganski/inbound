@@ -10,7 +10,7 @@ const Courses = () => {
       <section className={styles.courses}>
         <h3 className={styles.title}>{t.courses.title}</h3>
         <div className={styles.gridContainer}>
-          {data.slice(0, 4).map((item) => (
+          {data.slice(0, 3).map((item) => (
             <div
               key={item.id}
               className={styles.gridItem}

@@ -1,50 +1,47 @@
 {
-  "head": {
-    "title": "Leadster: Chatbot de Marketing para Aumentar Geração de Leads",
-    "description": "Conheça a Leadster, um Chatbot de Marketing Conversacional para Aumentar a Geração de Leads Qualificados no seu Site. Visite e saiba mais!",
-    "keywords": "Leadster, Chatbot, Marketing"
+  "navbar": {
+    "altLogoUnycos": "Unycos"
   },
 
   "hero": {
-    "titleBalloon": "WEBNARS EXCLUSIVOS",
-    "subtitle": "Menos Conversinha,",
-    "title": "Mais Conversão",
-    "slogan": "Conheça as estratégias que <span>mudaram o jogo</span> e como aplicá-las no seu negócio",
-    "altDots": "Três tracejados em cima do da vogal ó"
+    "title": "MIREIA BELMONTE",
+    "subtitle": "enseña natación",
+    "iconBook": "12 módulos",
+    "altIconBook": "Icon Book",
+    "iconFilm": "+3,5 horas",
+    "altIconFilm": "Icon Film",
+    "heroButtonText": "Mas información"
   },
 
   "content": {
-    "loading" : "Cargando...",
+    "loading": "Cargando...",
     "exclusiveTitle": "CONTENIDO EXCLUSIVO",
     "exclusiveButtonText": "Mas información",
-    "iconBook" : "E-books",
-    "altIconBook"  : "E-books",
-    "iconVideo" : "360º Videos",
-    "altIconVideo" : "360º Videos",
-    "iconTest" : "TESTS",
-    "altIconTest" : "TESTS",
-    "iconTask" : "Tareas",
-    "altIconTask" : "Tareas",
-
-
-
-    "lessonsTittle" : "LESSON PLAN",
+    "iconBook": "E-books",
+    "altIconBook": "E-books",
+    "iconVideo": "360º Videos",
+    "altIconVideo": "360º Videos",
+    "iconTest": "TESTS",
+    "altIconTest": "TESTS",
+    "iconTask": "Tareas",
+    "altIconTask": "Tareas",
+    "lessonsTittle": "LESSON PLAN",
     "lessonsButtonText": "VER TODOS"
   },
 
   "courses": {
-    "title" : "MÁS CURSOS"
+    "title": "MÁS CURSOS"
   },
 
   "contact": {
     "title": "OBTÉN MÁS INFORMACiÓN",
     "name": "Nombre completo",
     "email": "Correo electrónico",
-    "country" : "País / Código país",
-    "phone" : "TeLéfono",
+    "country": "País / Código país",
+    "phone": "TeLéfono",
     "condition": "Acepto las condiciones de uso y protección de datos.",
-    "news" : "Me gustaría recibir información sobre nuevos cursos, ofertas y promociones",
-    "sendButton" : "Enviar"
+    "news": "Me gustaría recibir información sobre nuevos cursos, ofertas y promociones",
+    "sendButton": "Enviar"
   },
 
   "rating": {
