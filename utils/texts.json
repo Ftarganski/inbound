@@ -17,7 +17,16 @@
 
   "courses": {},
 
-  "contact": {},
+  "contact": {
+    "title": "OBTÉN MÁS INFORMACiÓN",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "country" : "País / Código país",
+    "phone" : "TeLéfono",
+    "condition": "Acepto las condiciones de uso y protección de datos.",
+    "news" : "Me gustaría recibir información sobre nuevos cursos, ofertas y promociones",
+    "sendButton" : "Enviar"
+  },
 
   "rating": {
     "title": "Comentarios de los estudiantes",
