@@ -20,7 +20,7 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => { 
       try {
-        const response = await axios.get("/api/api.js"); // Caminho da API proxy local
+        const response = await axios.get("/api/api.js"); // API proxy local
 
         setCourseData(response.data.spotlights);
         setIsLoading(false);
