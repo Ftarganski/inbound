@@ -18,7 +18,7 @@ const Main = () => {
   const [selectedImage, setSelectedImage] = useState<string>(''); // Adiciona o estado para a imagem selecionada
  
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async () => { 
       try {
         const response = await axios.get("/api/api.js"); // Caminho da API proxy local
 
@@ -30,7 +30,7 @@ const Main = () => {
       }
     };
 
-    fetchData();
+    fetchData(); 
   }, []);
 
 
