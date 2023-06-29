@@ -1,4 +1,4 @@
-import HeadSite from "@/components/headSite/headsite";
+import HeadSite from "@/components/HeadSite/HeadSite";
 import Navbar from "@/components/navbar/navbar";
 import Hero from "@/components/hero/hero";
 import Main from "@/components/main/main";
