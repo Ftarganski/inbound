@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./rating.module.css";
 import data from "../../server/rating.json";
 import Image from "next/image";
 import ThumbsUp from "../../public/images/thumbs-up.svg";
 import ThumbsUpGrey from "../../public/images/thumbs-up-grey.svg";
-import Checkmark from"../../public/images/checkmark.svg";
+import Checkmark from "../../public/images/checkmark.svg";
 import { getTexts } from "../../utils/textUtils";
 
 const Rating = () => {
   const t = getTexts();
 
-  const getInitials = (name:any) => {
+  const getInitials = (name: any) => {
     const names = name.split(" ");
-    let initials = names.map((n:any) => n[0]);
+    let initials = names.map((n: any) => n[0]);
     initials = initials.slice(0, 2);
     return initials.join("").toUpperCase();
+  };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 320);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Verifica a largura da tela no carregamento inicial
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const getShortName = (name: any) => {
+    const names = name.split(" ");
+    let shortName = names[0];
+
+    if (names.length > 1) {
+      shortName += " " + names[names.length - 1][0];
+    }
+
+    return shortName + ".";
   };
 
   return (
@@ -33,6 +59,12 @@ const Rating = () => {
           />
         </div>
 
+        {isMobile ? (
+          <h3 className={styles.titleUsers}>{t.rating.titleUsers}</h3>
+        ) : (
+          <></>
+        )}
+
         <div className={styles.gridContainer}>
           {data.slice(0, 3).map((item, index) => (
             <div
@@ -43,7 +75,7 @@ const Rating = () => {
             >
               {item.imageUrl ? (
                 <Image
-                className={styles.photoUser}
+                  className={styles.photoUser}
                   src={item.imageUrl}
                   alt={t.rating.altImage}
                   width={80}
@@ -52,20 +84,34 @@ const Rating = () => {
               ) : (
                 <div className={styles.initials}>
                   <p>{getInitials(item.name)}</p>
-                  </div>
+                </div>
               )}
               <div>
-                <div className={styles.testUser}>
-                  <div className={styles.name}>{item.name}</div>
-                    <Image
-                      className={styles.thumbsRating}
-                      src={ThumbsUpGrey}
-                      alt={t.rating.altThumbs}
-                    />
-                  <div className={styles.date}>{item.date}</div>
-                </div>
+                {isMobile ? (
+                  <>
+                    <div className={styles.testimony}>{item.testimony}</div>
 
-                <div className={styles.testimony}>{item.testimony}</div>
+                    <div className={styles.testUser}>
+                      <div className={styles.name}>
+                        {getShortName(item.name)}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className={styles.testUser}>
+                      <div className={styles.name}>{item.name}</div>
+                      <Image
+                        className={styles.thumbsRating}
+                        src={ThumbsUpGrey}
+                        alt={t.rating.altThumbs}
+                      />
+                      <div className={styles.date}>{item.date}</div>
+                    </div>
+
+                    <div className={styles.testimony}>{item.testimony}</div>
+                  </>
+                )}
 
                 <div
                   className={`${styles.response} ${
@@ -75,13 +121,13 @@ const Rating = () => {
                   {item.response}
                 </div>
                 <div className={styles.equip}>
-                {item.response && (
+                  {item.response && (
                     <Image
                       className={styles.checkmark}
                       src={Checkmark}
                       alt={t.rating.altCheckmark}
                     />
-                  )}               
+                  )}
                   <div className={styles.user}>{item.user}</div>
                   <div className={styles.userRole}>{item.userRole}</div>
                   <div className={styles.responseDate}>{item.responseDate}</div>

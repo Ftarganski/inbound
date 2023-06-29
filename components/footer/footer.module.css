@@ -74,6 +74,7 @@
 /* Mobile */
 @media (max-width: 320px) {
   .footer {
+    margin-top: 5px;
     height: auto;
   }
 

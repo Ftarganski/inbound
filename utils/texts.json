@@ -57,6 +57,7 @@
 
   "rating": {
     "title": "Comentarios de los estudiantes",
+    "titleUsers": "Comentários de Usuários",
     "subtitle": "<span>98.7% de valoraciones positivas </span>/ total de 726 valoraciones",
     "buttonText": "VER MÁS",
     "altThumbs": "Thumbs Up",
