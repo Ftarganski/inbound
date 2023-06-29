@@ -144,7 +144,7 @@
 
   .guarantee {
     display: flex;
-    width: 288px;
+    width: 90vw;
     flex-direction: row;
     justify-content: center;
     flex-shrink: 0;
@@ -152,14 +152,14 @@
   }
 
   .iconStar {
-    width: 48px;
+    width: 20%;
     height: 48px;
     flex-shrink: 0;
   }
 
   .guaranteeTitle {
     display: flex;
-    width: 224px;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
@@ -169,7 +169,6 @@
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-    margin-left: 16px;
   }
 
   .guaranteeDescription {

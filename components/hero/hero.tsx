@@ -5,9 +5,11 @@ import IconBook from "../../public/images/icon-book-open.svg";
 import IconFilm from "../../public/images/icon-film.svg";
 import data from "../../server/courses.json";
 import { getTexts } from "../../utils/textUtils";
+import { useWindowResize } from "../../hooks/useWindowResize";
 
 const Hero = () => {
   const t = getTexts();
+  const isMobile = useWindowResize();
 
   return (
     <>
@@ -30,7 +32,14 @@ const Hero = () => {
             </div>
           ))}
 
-        <div className={styles.heroData}>
+        {isMobile ? (
+          <>
+          
+          <button className={styles.heroButton}>
+            <p className={styles.heroButtonText}>{t.hero.ButtonTextInfo}</p>
+          </button>
+
+          <div className={styles.heroData}>
           <div className={styles.heroInfo}>
             <div className={styles.heroBorder}>
               <Image
@@ -53,10 +62,51 @@ const Hero = () => {
             <p className={styles.heroIconText}>{t.hero.iconFilm}</p>
           </div>
 
-          <button className={styles.heroButton}>
-            <p className={styles.heroButtonText}>{t.hero.heroButtonText}</p>
-          </button>
+          
         </div>
+
+        <h3 className={styles.heroCitation}>{t.hero.citation}</h3>
+             
+        <button className={styles.ButtonQuestion}>
+            <p className={styles.ButtonTextQuestion}>{t.hero.ButtonTextQuestion}</p>
+          </button>
+
+          <h3 className={styles.heroCitation}>{t.hero.goal}</h3>
+        
+        <p className={styles.heroInspiration}>{t.hero.inspiration}</p>
+          
+          </>
+        ) : (
+          <>
+            <div className={styles.heroData}>
+              <div className={styles.heroInfo}>
+                <div className={styles.heroBorder}>
+                  <Image
+                    className={styles.heroIcon}
+                    src={IconBook}
+                    alt={t.hero.altIconBook}
+                  />
+                </div>
+                <p className={styles.heroIconText}>{t.hero.iconBook}</p>
+              </div>
+
+              <div className={styles.heroInfo}>
+                <div className={styles.heroBorder}>
+                  <Image
+                    className={styles.heroIcon}
+                    src={IconFilm}
+                    alt={t.hero.altIconFilm}
+                  />
+                </div>
+                <p className={styles.heroIconText}>{t.hero.iconFilm}</p>
+              </div>
+
+              <button className={styles.heroButton}>
+                <p className={styles.heroButtonText}>{t.hero.ButtonText}</p>
+              </button>
+            </div>
+          </>
+        )}
       </section>
     </>
   );
