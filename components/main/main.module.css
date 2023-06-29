@@ -176,6 +176,11 @@
   border-radius: 4px;
   background: var(--color-gold);
   margin-top: 42px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.exclusiveButton:hover {
+  transform: scale(1.008);
 }
 
 .exclusiveButtonText {
@@ -293,7 +298,13 @@
   background-color: transparent;
   align-items: center;
   margin: 35px 0;
+  transition: transform 0.2s ease-in-out;
 }
+
+.lessonButton:hover {
+  transform: scale(1.008);
+}
+
 .lessonButtonText {
   font-size: 12px;
   font-weight: 700;

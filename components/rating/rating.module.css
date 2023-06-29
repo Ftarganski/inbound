@@ -41,11 +41,25 @@
   margin-right: 10px;
 }
 
+.thumbsRating {
+  height: 20px;
+  width: 20px;
+  fill: var(--color-primary-dark-50);
+  margin: 0 10px;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
   width: 752px;
+  margin-top: 20px;
 }
 
 .gridItem {
@@ -57,14 +71,44 @@
 }
 
 .hasBorder {
-    border-bottom: 1px solid var(--color-primary-dark-50);
-  }
+  border-bottom: 1px solid var(--color-primary-dark-50);
+}
+
+.initials {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 80px;
+  background: var(--color-primary-dark-50);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.initials > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--background);
+  text-align: center;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 .image {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.photoUser {
+  margin-top: 10px;
+  width: 80;
+  height: 80;
 }
 
 .testUser {
@@ -97,14 +141,12 @@
   line-height: 20px;
   width: 656px;
   margin-top: 10px;
-
 }
 
 .hasContent {
-    padding-top: 15px;
-    border-top: 1px solid var(--color-primary-dark-50);
-
-  }
+  padding-top: 15px;
+  border-top: 1px solid var(--color-primary-dark-50);
+}
 
 .response {
   color: var(--color-primary-dark-50);
@@ -119,21 +161,26 @@
   flex-direction: row;
   width: 656px;
   margin: 10px 0;
-
 }
 
 .user {
-  color: var(--color-gold);
+  color: var(--color-primary-dark-50);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 20px;
+  display: flex;
+  align-items: center;
+ 
 }
 
 .userRole {
   color: var(--color-gold);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-left : 5px
 }
 
 .responseDate {
@@ -141,6 +188,9 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
 }
 
 .button {
@@ -153,6 +203,11 @@
   background-color: transparent;
   align-items: center;
   margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.008);
 }
 
 .buttonText {

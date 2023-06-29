@@ -93,6 +93,11 @@
   border-radius: 4px;
   background: var(--color-gold);
   align-self: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.heroButton:hover {
+  transform: scale(1.008);
 }
 
 .heroButtonText {

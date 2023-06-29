@@ -60,7 +60,8 @@
     "subtitle": "<span>98.7% de valoraciones positivas </span>/ total de 726 valoraciones",
     "buttonText": "VER MÁS",
     "altThumbs": "Thumbs Up",
-    "altImage": "User"
+    "altImage": "User",
+    "altCheckmark": "Checkmark"
   },
 
   "posts": {
