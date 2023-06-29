@@ -1,6 +1,9 @@
 {
   "navbar": {
-    "altLogoUnycos": "Unycos"
+    "altLogoUnycos": "Unycos",
+    "courses": "cursos",
+    "register": "register",
+    "login": "login"
   },
 
   "hero": {

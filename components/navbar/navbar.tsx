@@ -23,9 +23,9 @@ const Navbar = () => {
 
           <div className={styles.navbarItem}>
             <ul>
-              <li>CURSOS</li>
-              <li>REGISTER</li>
-              <li>LOGIN</li>
+              <li>{t.navbar.courses}</li>
+              <li>{t.navbar.register}</li>
+              <li>{t.navbar.login}</li>
             </ul>
 
           </div>
