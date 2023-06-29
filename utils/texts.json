@@ -52,7 +52,10 @@
     "phone": "TeLéfono",
     "condition": "Acepto las condiciones de uso y protección de datos.",
     "news": "Me gustaría recibir información sobre nuevos cursos, ofertas y promociones",
-    "sendButton": "Enviar"
+    "sendButton": "Enviar",
+    "altIconStar": "Star",
+    "guaranteeTitle" : "Los estudiantes le dan a Unycos una calificación promedio de 4.7 de 5 estrellas.",
+    "guaranteeDescription" : "100% de garantía de satisfacción. 30 días de garantía de devolución de dinero."
   },
 
   "rating": {

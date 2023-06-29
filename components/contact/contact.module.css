@@ -90,6 +90,9 @@
 
 /* Mobile */
 @media (max-width: 320px) {
+  .contact{
+    padding-top: 0;
+  }
   .title {
     text-align: center;
     font-size: 16px;
@@ -98,6 +101,7 @@
     line-height: 20px;
     text-transform: uppercase;
     padding-bottom: 0;
+    padding-top: 32px;
   }
 
   .form {
@@ -115,28 +119,67 @@
     width: 95%;
   }
 
-  .formGroup:nth-child(5) .check, .formGroup:nth-child(6) .check {
+  .formGroup:nth-child(5) .check,
+  .formGroup:nth-child(6) .check {
     width: 24px;
     height: 24px;
   }
 
-  .formGroup:nth-child(5) > label, .formGroup:nth-child(6) > label {
+  .formGroup:nth-child(5) > label,
+  .formGroup:nth-child(6) > label {
     width: 85%;
     align-items: center;
     display: flex;
   }
 
-
   .button {
-    
     width: 95%;
     margin: 0;
+  }
+
+  .guarantee {
+    display: flex;
+    width: 288px;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 0;
     
   }
 
-  
+  .iconStar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
 
+  .guaranteeTitle {
+    display: flex;
+    width: 224px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-primary-dark-25);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-left: 16px;
+  }
 
+  .guaranteeDescription {
+    display: flex;
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-primary-dark-50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 10px;
+  }
 }
 
 /* Tablet and Smaller Desktop */
