@@ -38,9 +38,8 @@
   padding-bottom: 5px;
 }
 
-.gridItem:hover{
-    opacity: 1;
-    
+.gridItem:hover {
+  opacity: 1;
 }
 
 .courseSpeaker {
@@ -71,7 +70,47 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 320px) {
+  .courses {
+    padding-bottom: 32px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(1, 0fr);
+    gap: 8px;
+    width: 95vw;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .gridItem {
+    width: 95vw;
+    height: 160px;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 0;
+    box-shadow: 0px 0px 1px 0px #fff inset;
+  }
+
+  .courseSpeaker {
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .courseTitle {
+    width: 100%;
+    padding-left: 8px;
+  }
 }
 
 /* Tablet and Smaller Desktop */

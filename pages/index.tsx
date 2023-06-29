@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar/navbar";
 import Hero from "@/components/hero/hero";
@@ -9,6 +10,21 @@ import Blog from "@/components/blog/blog";
 import Footer from "@/components/footer/footer";
 
 export default function Home() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 320);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Verifica a largura da tela no carregamento inicial
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -20,7 +36,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
-      <Navbar />
+   
+      {isMobile ? (
+        <>
+          <Navbar />
+      <Hero />
+      <Main />
+      
+      <Contact />
+      <Rating />
+      <Courses />
+      <Blog />
+      <Footer />
+        </>
+      ) : (
+        <>
+          <Navbar />
       <Hero />
       <Main />
       <Courses />
@@ -28,6 +59,17 @@ export default function Home() {
       <Rating />
       <Blog />
       <Footer />
+        </>
+      )}
+      
+      {/* <Navbar />
+      <Hero />
+      <Main />
+      <Courses />
+      <Contact />
+      <Rating />
+      <Blog />
+      <Footer /> */}
     </>
   );
 }
