@@ -3,7 +3,15 @@
     "altLogoUnycos": "Unycos",
     "courses": "cursos",
     "register": "register",
-    "login": "login"
+    "login": "login",
+    "hello" : "hello, ",
+    "user" : "JUCA BALA",
+    "lkcontrolpanel" : "panel de control",
+    "lkcourse" : "tus cursos",
+    "lkprofile" : "perfil",
+    "lkaccount" : "cuenta",
+    "lklogout" :"cerrar sesión",
+    "altArrow" : "Arrow"
   },
 
   "hero": {
