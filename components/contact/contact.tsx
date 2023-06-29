@@ -18,7 +18,7 @@ const Contact = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 320);
+      setIsMobile(window.innerWidth <= 480);
     };
 
     window.addEventListener("resize", handleResize);

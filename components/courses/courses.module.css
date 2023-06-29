@@ -70,7 +70,7 @@
 }
 
 /* Mobile */
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .courses {
     padding-bottom: 32px;
     padding-top: 33px;

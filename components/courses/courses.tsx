@@ -9,7 +9,7 @@ const Courses = () => {
   
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth <= 320) {
+        if (window.innerWidth <= 480) {
           setNumItems(2);
         } else {
           setNumItems(3);
