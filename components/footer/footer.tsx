@@ -5,6 +5,7 @@ import Facebook from "../../public/images/icon-facebook.svg";
 import Instagram from "../../public/images/icon-instagram.svg";
 import Twitter from "../../public/images/icon-twitter.svg";
 import Youtube from "../../public/images/icon-youtube.svg";
+import Whatsapp from "../../public/images/icon-whatsapp.png";
 import Logo from "../../public/images/logo-unycos.svg";
 import { getTexts } from "../../utils/textUtils";
 
@@ -13,6 +14,7 @@ const Footer = () => {
   return (
     <>
       <section className={styles.footer}>
+        <div className={styles.title}>{t.footer.title}</div>
         <div className={styles.icons}>
           <Image
             className={styles.icon}
@@ -35,6 +37,15 @@ const Footer = () => {
             alt={t.footer.altIconYoutube}
           />
         </div>
+        <h4 className={styles.contactTitle}>{t.footer.contactTitle}</h4>
+        <button className={styles.contactButton}>
+          <p className={styles.contactButtonText}>
+          <Image
+            className={styles.iconMobile}
+            src={Whatsapp}
+            alt={t.footer.altIconWhatsapp}
+          />{t.footer.contactButtonText}</p>
+          </button>
 
         <div className={styles.line}></div>
 

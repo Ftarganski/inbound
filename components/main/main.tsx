@@ -17,21 +17,46 @@ const Main = () => {
   const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(null);
   const [selectedImage, setSelectedImage] = useState<string>(''); // Adiciona o estado para a imagem selecionada
  
+  // useEffect(() => {
+  //   const fetchData = async () => { 
+  //     try {
+  //       const response = await axios.get("/api/api.js"); // API proxy local
+
+  //       setCourseData(response.data.spotlights);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.error(error);
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchData(); 
+  // }, []);
+
+
   useEffect(() => {
-    const fetchData = async () => { 
-      try {
-        const response = await axios.get("/api/api.js"); // API proxy local
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.beta.unycos.com/u/courses/spotlights/natacion",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "x-mejor-key": "unycos",
+          },
+        }
+      );
+      setCourseData(response.data.spotlights);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+    }
+  };
 
-        setCourseData(response.data.spotlights);
-        setIsLoading(false);
-      } catch (error) {
-        console.error(error);
-        setIsLoading(false);
-      }
-    };
+  fetchData();
+}, []);
 
-    fetchData(); 
-  }, []);
 
 
 

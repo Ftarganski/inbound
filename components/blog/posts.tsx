@@ -7,21 +7,24 @@ const Posts = () => {
   const t = getTexts();
   return (
     <>
-      <section className={styles.posts}>
-        <h3 className={styles.postsTitle}>{t.posts.title}</h3>
-        <div className={styles.gridContainer}>
-          {data.slice(0, 4).map((item) => (
-            <div key={item.id} className={styles.gridItem}>
-              <h4 className={styles.postsPostTitle}>{item.title}</h4>
-              <p className={styles.postsPostDate}>{item.date}</p>
-            </div>
-          ))}
-        </div>
+     <section className={styles.posts}>
+  <h3 className={styles.postsTitle}>{t.posts.title}</h3>
+  <div className={styles.gridContainer}>
+    {data.slice(0, 4).map((item, index) => (
+      <div
+        key={item.id}
+        className={`${styles.gridItem} ${index === 3 ? styles.lastGridItem : ''}`}
+      >
+        <h4 className={styles.postsPostTitle}>{item.title}</h4>
+        <p className={styles.postsPostDate}>{item.date}</p>
+      </div>
+    ))}
+  </div>
 
-        <button className={styles.postsButton}>
-          <p className={styles.postsButtonText}>{t.posts.buttonText}</p>
-        </button>
-      </section>
+  <button className={styles.postsButton}>
+    <p className={styles.postsButtonText}>{t.posts.buttonText}</p>
+  </button>
+</section>
     </>
   );
 };

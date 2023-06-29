@@ -78,11 +78,15 @@
   },
 
   "footer": {
+    "title" : "únete a la comunidad",
+    "contactTitle": "¿Dudas? Contáctanos por whatsapp",
+    "contactButtonText": "+34 653 46 73 60",
     "altIconFacebook": "Facebook",
     "altIconInstagram": "Instagram",
     "altIconTwitter": "Twitter",
     "altIconYoutube": "Youtube",
     "altLogoUnycos": "Unycos",
+    "altIconWhatsapp" : "Whatsapp",
     "conditions": "Terminos y condiciones",
     "privacyPolicy": "Política de privacidad",
     "termsOfService": "Aviso legal",
