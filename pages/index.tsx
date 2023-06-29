@@ -1,4 +1,4 @@
-import HeadSite from "@/components/HeadSite/HeadSite";
+import Head from "next/head";
 import Navbar from "@/components/navbar/navbar";
 import Hero from "@/components/hero/hero";
 import Main from "@/components/main/main";
@@ -11,7 +11,15 @@ import Footer from "@/components/footer/footer";
 export default function Home() {
   return (
     <>
-      <HeadSite />
+      <Head>
+        <title>Unycos</title>
+        <meta
+          name="description"
+          content="Si quieres destacar, debes tener tu propio sello para diferenciarte de los demás. Aprende de los mejores con los cursos online de Unycos.com"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/favicon.png" />
+      </Head>
       <Navbar />
       <Hero />
       <Main />
