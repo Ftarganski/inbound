@@ -1,7 +1,7 @@
 # Teste Coodesh FrontEnd - Junho 2023
 
 Bem vindo!
-Esta é a solução encontrada para o desafio de Frontend da empresa [Unycos](https://unycos.com/) 
+Esta é a solução encontrada para o desafio de Frontend da empresa [Inbound](https://www.agenciainbound.com.br/) 
 
 ## 🌐 Acesso ao deploy no Vercel
 [Deploy Unycos](https://inbound-psi.vercel.app/) 
