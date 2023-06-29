@@ -7,7 +7,7 @@ Esta é a solução encontrada para o desafio de Frontend da empresa [Unycos](ht
 [Deploy Unycos](https://inbound-psi.vercel.app/) 
 
 ## 📋 Demanda
-- [x] Utilizar linguegens HTML5 e CSS3 com os efeitos e animações propostas versão Desktop e Responsiva Mobile.
+- [x] Utilizar linguagens HTML5 e CSS3 com os efeitos e animações propostas versão Desktop e Responsiva Mobile.
 - [x] Usar boas práticas de HTML para SEO.
 - [x] Usar estratégias de CSS Module.
 - [x] Não utilizar nenhum tipo de design system pré-pronto: Bootstrap, material design, etc.
