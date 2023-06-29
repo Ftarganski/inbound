@@ -5,58 +5,41 @@ import Image from "next/image";
 import Star from "../../public/images/icon-star.svg";
 import { Country } from "../../types/types";
 import { getTexts } from "../../utils/textUtils";
+import { useWindowResize } from "../../hooks/useWindowResize";
 
 const Contact = () => {
   const t = getTexts();
-
+  const isMobile = useWindowResize();
   const [countries, setCountries] = useState<Country[]>([]);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setCountries(phoneData.countries);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Verifica a largura da tela no carregamento inicial
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <section className={styles.contact}>
+        {isMobile ? (
+          <>
+            <div className={styles.guarantee}>
+              <Image
+                className={styles.iconStar}
+                src={Star}
+                alt={t.contact.altIconStar}
+              />
 
-      {isMobile ? (
-            <>
-                    <div className={styles.guarantee}>    
-                      <Image className={styles.iconStar}
-                      src={Star} alt={t.contact.altIconStar}/>
+              <div className={styles.guaranteeTitle}>
+                {t.contact.guaranteeTitle}
+              </div>
+            </div>
 
-                      <div className={styles.guaranteeTitle}>{t.contact.guaranteeTitle}
-
-                      </div>
-
-                    </div>
-
-            <p className={styles.guaranteeDescription}>{t.contact.guaranteeDescription}</p>
-                      
+            <p className={styles.guaranteeDescription}>
+              {t.contact.guaranteeDescription}
+            </p>
           </>
-          ) : (
+        ) : (
           <></>
         )}
-
-    
-
-
-
-
 
         <h3 className={styles.title}>{t.contact.title}</h3>
         <form className={styles.form}>
@@ -79,7 +62,7 @@ const Contact = () => {
           </div>
 
           <div className={styles.formGroup}>
-          <select id="country" name="country">
+            <select id="country" name="country">
               <option value="">{t.contact.country}</option>
               {countries.map((country, index) => (
                 <option key={index} value={country.country_code}>

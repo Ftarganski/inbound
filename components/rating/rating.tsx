@@ -6,9 +6,11 @@ import ThumbsUp from "../../public/images/thumbs-up.svg";
 import ThumbsUpGrey from "../../public/images/thumbs-up-grey.svg";
 import Checkmark from "../../public/images/checkmark.svg";
 import { getTexts } from "../../utils/textUtils";
+import { useWindowResize } from "../../hooks/useWindowResize";
 
 const Rating = () => {
   const t = getTexts();
+  const isMobile = useWindowResize();
 
   const getInitials = (name: any) => {
     const names = name.split(" ");
@@ -16,21 +18,6 @@ const Rating = () => {
     initials = initials.slice(0, 2);
     return initials.join("").toUpperCase();
   };
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Verifica a largura da tela no carregamento inicial
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const getShortName = (name: any) => {
     const names = name.split(" ");

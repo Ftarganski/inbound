@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar/navbar";
 import Hero from "@/components/hero/hero";
-import Main from "@/components/main/main";
+import Lessons from "@/components/lessons/lessons";
 import Courses from "@/components/courses/courses";
 import Contact from "@/components/contact/contact";
 import Rating from "@/components/rating/rating";
 import Blog from "@/components/blog/blog";
 import Footer from "@/components/footer/footer";
+import Slider from "@/components/slider/slider";
 
 export default function Home() {
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -36,40 +36,32 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
-   
+
       {isMobile ? (
         <>
           <Navbar />
-      <Hero />
-      <Main />
-      
-      <Contact />
-      <Rating />
-      <Courses />
-      <Blog />
-      <Footer />
+          <Hero />
+          <Slider />
+          <Lessons />
+          <Contact />
+          <Rating />
+          <Courses />
+          <Blog />
+          <Footer />
         </>
       ) : (
         <>
           <Navbar />
-      <Hero />
-      <Main />
-      <Courses />
-      <Contact />
-      <Rating />
-      <Blog />
-      <Footer />
+          <Hero />
+          <Slider />
+          <Lessons />
+          <Courses />
+          <Contact />
+          <Rating />
+          <Blog />
+          <Footer />
         </>
       )}
-      
-      {/* <Navbar />
-      <Hero />
-      <Main />
-      <Courses />
-      <Contact />
-      <Rating />
-      <Blog />
-      <Footer /> */}
     </>
   );
 }
