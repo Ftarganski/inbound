@@ -78,6 +78,7 @@
   }
 
   .title {
+    
     color: var(--textColor);
     text-align: center;
     font-size: 16px;
@@ -89,6 +90,7 @@
   }
 
   .contactTitle {
+    display: flex;
     color: var(--textColor);
     text-align: center;
     font-size: 12px;
@@ -113,6 +115,7 @@
   }
 
   .iconMobile {
+    display: flex;
     width: 16px;
     height: 16px;
     margin-right: 6px;
