@@ -67,6 +67,10 @@
   line-height: 16px;
 }
 
+.iconMobile,.contactTitle, .contactButton, .contactButtonText{
+  display: none;
+}
+
 /* Mobile */
 @media (max-width: 320px) {
   .footer {
