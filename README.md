@@ -35,7 +35,7 @@ Na organização do código buscou-se seguer os seguintes princípios:
 ### Linha de Raciocínio
 Para a realização do desafio estabeleci alguns parâmetros a seguir no desenvolvimento
 - Inicialmente o projeto foi dividido em componentes individuais `/Navbar.tsx`, `/Hero.tsx`, `/Main.tsx`, `/Courses.tsx`, `/Contact.tsx`, `/Rating.tsx`, `/Blog.tsx`, `/Footer.tsx`, seguindo a lógica de que cada componente possa ser reutilizado em outros projetos. 
-- Na seção  `/Main.tsx` construímos o componente de forma dinâmica com a utilização da API indicada.
+- Na seção  `/Main.tsx` foi construído um componente slider de forma dinâmica com a utilização da RestAPI disponibilizada.
 - Todo o conteúdo em texto do projeto foi transferido para arquivos JSON específica dentro das pasta `/server`.
  
 ### Expansibilidade
@@ -54,17 +54,14 @@ flowchart TD;
     Index-->Blog;
     Index-->Footer;
     Blog-->Posts;
-    Blog-->Postblog
-      
-    Component.module.css-->components;
-    Types.ts-->components;
+    Blog-->Postblog  
+      Component.module.css-->components;
+      Types.ts-->components;
         Server-->blog.json;
         Server-->courses.json;
         Server-->lessons.json;
         Server-->phone.json;
         Server-->rating.json;
-
-
 ```
 
 ## ⚙️ Linguagens de Programação Utilizadas
@@ -108,9 +105,6 @@ A página inicial `/index.tsx`contêm metadados importantes para SEO e exibiçã
 
 ### Imagens e Logos
 Certifique-se de substituir as imagens de exemplo pelos arquivos corretos da sua aplicação. As imagens estão localizadas na pasta `/public/images`. Certifique-se de manter a estrutura correta de pastas e atualize as referências de imagem nos componentes apropriados.
-
-### Dados dos Vídeos
-O componente `/GridVideos.tsx` utiliza dados estáticos de vídeos a partir de um arquivo JSON `/Main/videos.json`. Certifique-se de atualizar os dados do arquivo JSON com os vídeos corretos da sua aplicação.
 
 ### Considerações Finais
 Após a conclusão dessas etapas, o código web estará implantado e acessível por meio do servidor de hospedagem. Certifique-se de realizar os testes necessários para garantir que a aplicação esteja funcionando conforme o esperado.
