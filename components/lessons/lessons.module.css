@@ -183,7 +183,124 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 420px) {
+  .exclusive {
+    padding-bottom: 0;
+  }
+
+  .exclusiveIcons {
+    width: 90vw;
+  }
+
+  .icons {
+    width: auto;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .iconText {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .lessons {
+    padding-top: 40px;
+  }
+
+  .gridContainer {
+    background-color: var(--background);
+    width: 95%;
+    margin-top: 16px;
+    gap: 0;
+    align-items: center;
+  }
+
+  .gridItem {
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-primary-dark-50);
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .lastItem {
+    border: none;
+  }
+
+  .lessonID {
+    color: var(--color-primary-dark-25);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    height: 24px;
+    text-align: left;
+    margin-right: 10px;
+    width: 10%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .lessonTitle {
+    justify-content: center;
+    color: var(--color-primary-dark-50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    height: 24px;
+    width: 80%;
+    padding: 0;
+  }
+
+  .arrowR {
+    width: 10%;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .highlightsButton {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 95vw;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid var(--color-primary-dark-25);
+    background-color: transparent;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  .highlightsButtonText {
+    color: var(--color-primary-dark-25);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 }
 
 /* Tablet and Smaller Desktop */

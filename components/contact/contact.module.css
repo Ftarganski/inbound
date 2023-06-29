@@ -117,7 +117,12 @@
     display: flex;
     flex-direction: row;
     width: 95%;
-  }
+}
+
+  .formGroup > input,
+.formGroup > select {
+  width: 100%;
+}
 
   .formGroup:nth-child(5) .check,
   .formGroup:nth-child(6) .check {
@@ -128,7 +133,7 @@
   .formGroup:nth-child(5) > label,
   .formGroup:nth-child(6) > label {
     width: 85%;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
   }
 

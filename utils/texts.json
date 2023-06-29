@@ -37,7 +37,10 @@
     "iconTask": "Tareas",
     "altIconTask": "Tareas",
     "lessonsTittle": "LESSON PLAN",
-    "lessonsButtonText": "VER TODOS"
+    "lessonsButtonText": "VER TODOS",
+    "lessonsHighlights": "DESTAQUES del curso",
+    "highlightssButtonText" : "Ver programa completo",
+    "altArrowR" : "Arrow"
   },
 
   "courses": {
