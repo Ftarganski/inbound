@@ -27,34 +27,12 @@ const Slider = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get("/api/api.js"); // API proxy local
-
-  //       setCourseData(response.data.spotlights);
-  //       setIsLoading(false);
-  //     } catch (error) {
-  //       console.error(error);
-  //       setIsLoading(false);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
+  //API VIA PROXY INTERNO
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://api.beta.unycos.com/u/courses/spotlights/natacion",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "x-mejor-key": "unycos",
-            },
-          }
-        );
+        const response = await axios.get("/api/api.js"); // API proxy local
+
         setCourseData(response.data.spotlights);
         setIsLoading(false);
       } catch (error) {
@@ -65,6 +43,31 @@ const Slider = () => {
 
     fetchData();
   }, []);
+
+
+  //API COM ERRO DE CORS
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://api.beta.unycos.com/u/courses/spotlights/natacion",
+  //         {
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             "x-mejor-key": "unycos",
+  //           },
+  //         }
+  //       );
+  //       setCourseData(response.data.spotlights);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.error(error);
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   return (
     <>
