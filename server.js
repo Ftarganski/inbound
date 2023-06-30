@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-const PORT = 9000; // Porta que o servidor intermediário irá ouvir
+const PORT = 9004; // Porta que o servidor intermediário irá ouvir
 
 // Middleware para adicionar cabeçalhos CORS
 app.use((req, res, next) => {
