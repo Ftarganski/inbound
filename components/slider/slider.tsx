@@ -13,7 +13,7 @@ const Slider = () => {
   const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(
     null
   );
-  const [selectedImage, setSelectedImage] = useState<string>(""); // Adiciona o estado para a imagem selecionada
+  const [selectedImage, setSelectedImage] = useState<string>("");
 
   const handleSliderItemClick = (index: number) => {
     if (courseData && courseData.length > 0) {
@@ -23,16 +23,14 @@ const Slider = () => {
       updatedCourseData[0] = selectedSpotlight;
 
       setSelectedSpotlight(selectedSpotlight);
-      setSelectedImage(selectedSpotlight.image); // Atualiza a imagem selecionada
+      setSelectedImage(selectedSpotlight.image);
     }
   };
 
-  //API VIA PROXY INTERNO
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/api.js"); // API proxy local
-
+        const response = await axios.get("/api/u/courses/spotlights/natacion");
         setCourseData(response.data.spotlights);
         setIsLoading(false);
       } catch (error) {
@@ -40,10 +38,8 @@ const Slider = () => {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, []);
-
 
   //API COM ERRO DE CORS
   // useEffect(() => {
@@ -65,7 +61,6 @@ const Slider = () => {
   //       setIsLoading(false);
   //     }
   //   };
-
   //   fetchData();
   // }, []);
 
