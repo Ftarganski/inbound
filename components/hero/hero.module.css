@@ -115,14 +115,17 @@
 }
 
 /* Mobile */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  .hero{
+    padding-bottom: 0;
+  }
   .heroImage {
     width: 100vw;
     height: 308;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat!important;
     background-size: cover;
-  }
+    }
 
   .heroTitle {
     text-align: center;

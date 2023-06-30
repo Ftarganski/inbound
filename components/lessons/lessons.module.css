@@ -183,9 +183,9 @@
 }
 
 /* Mobile */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .exclusive {
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .exclusiveIcons {
@@ -194,6 +194,7 @@
 
   .icons {
     width: auto;
+    margin-top: 24px;
   }
 
   .icon {

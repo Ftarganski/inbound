@@ -130,7 +130,64 @@
 
 /* Mobile */
 @media (max-width: 480px) {
-  
+  .slider {
+    padding: 0;
+  }
+  .sliderContainer {
+    width: 95vw;
+    margin-top: 16px;
+    height: auto;
+  }
+
+  .sliderCourseOthers {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    height: auto;
+  }
+
+  .sliderCourseOthersBlock {
+    width: 140px;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .sliderCourseImage {
+    width: 140px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      lightgray -35.111px -6.688px / 157.937% 155.469% no-repeat;
+    box-shadow: 0px 0px 1px 0px var(--textColor) inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .sliderCourseTitle {
+    color: var(--color-primary-dark-50);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
 
 /* Tablet and Smaller Desktop */
