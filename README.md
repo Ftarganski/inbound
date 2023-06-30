@@ -45,23 +45,26 @@ Prevendo a possibilidade de extensão futura do site para novas linguagens (atin
 ```mermaid
 %%{init: { 'theme': 'dark' } }%%
 flowchart TD;
-    Index-->Navbar;
-    Index-->Hero;
-    Index-->Main;
-    Index-->Courses;
-    Index-->Contact;
-    Index-->Rating;
-    Index-->Blog;
-    Index-->Footer;
+    Index--->Navbar;
+    Navbar--->Hero;
+    Index--->Slider;
+    Slider-->Lessons;
+    Lessons-->Courses;
+    Index--->Contact;
+    Index--->Rating;
+    Index--->Blog;
+    Index--->Footer;
     Blog-->Posts;
-    Blog-->Postblog  
-      Component.module.css-->components;
-      Types.ts-->components;
+    Posts-->Postblog  
+      Component.module.css-->Components;
+      Types.ts-->Components;
+      Hooks-->Components
         Server-->blog.json;
-        Server-->courses.json;
-        Server-->lessons.json;
-        Server-->phone.json;
+        Server--->courses.json;
+        Server---->lessons.json;
+        Server--->phone.json;
         Server-->rating.json;
+
 ```
 
 ## ⚙️ Linguagens de Programação Utilizadas
