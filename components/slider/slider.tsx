@@ -25,10 +25,21 @@ const Slider = () => {
     }
   };
 
+
+
+  //API COM ERRO DE CORS - FUNCIONA EM LOCALHOST
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/api/u/courses/spotlights/natacion');
+        const response = await axios.get(
+          "https://api.beta.unycos.com/u/courses/spotlights/natacion",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "x-mejor-key": "unycos",
+            },
+          }
+        );
         setCourseData(response.data.spotlights);
         setIsLoading(false);
       } catch (error) {
@@ -39,19 +50,11 @@ const Slider = () => {
     fetchData();
   }, []);
 
-  //API COM ERRO DE CORS
+  //API PROXY INTERNO (SERVER.JS) - AINDA COM BUG
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
-  //       const response = await axios.get(
-  //         "https://api.beta.unycos.com/u/courses/spotlights/natacion",
-  //         {
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             "x-mejor-key": "unycos",
-  //           },
-  //         }
-  //       );
+  //       const response = await axios.get('/api/u/courses/spotlights/natacion');
   //       setCourseData(response.data.spotlights);
   //       setIsLoading(false);
   //     } catch (error) {
