@@ -30,7 +30,7 @@ const Slider = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/u/courses/spotlights/natacion");
+        const response = await axios.get("https://api.beta.unycos.com/u/courses/spotlights/natacion");
         setCourseData(response.data.spotlights);
         setIsLoading(false);
       } catch (error) {
