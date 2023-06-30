@@ -10,8 +10,13 @@
     "lkcourse" : "tus cursos",
     "lkprofile" : "perfil",
     "lkaccount" : "cuenta",
+    "lkallaccount" : "Todos los cursos",
     "lklogout" :"cerrar sesión",
-    "altArrow" : "Arrow"
+    "altArrow" : "Arrow",
+    "altMenu" : "Menu",
+    "subtitle" : "Contáctanos por whatsapp",
+    "altIconWhats" : "Whatsapp",
+    "altNotification" : "Notification"
   },
 
   "hero": {
