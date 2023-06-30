@@ -10,10 +10,8 @@ const Slider = () => {
   const isMobile = useWindowResize();
   const [courseData, setCourseData] = useState<Spotlight[] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(
-    null
-  );
-  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [selectedSpotlight, setSelectedSpotlight] = useState<Spotlight | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>(''); // Adiciona o estado para a imagem selecionada
 
   const handleSliderItemClick = (index: number) => {
     if (courseData && courseData.length > 0) {
@@ -23,14 +21,14 @@ const Slider = () => {
       updatedCourseData[0] = selectedSpotlight;
 
       setSelectedSpotlight(selectedSpotlight);
-      setSelectedImage(selectedSpotlight.image);
+      setSelectedImage(selectedSpotlight.image); // Atualiza a imagem selecionada
     }
   };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.beta.unycos.com/u/courses/spotlights/natacion");
+        const response = await axios.get('/api/u/courses/spotlights/natacion');
         setCourseData(response.data.spotlights);
         setIsLoading(false);
       } catch (error) {
