@@ -6,7 +6,7 @@ const PORT = 9004; // Porta que o servidor intermediário irá ouvir
 
 // Middleware para adicionar cabeçalhos CORS
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://inbound-psi.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'http://localhost:9004');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
